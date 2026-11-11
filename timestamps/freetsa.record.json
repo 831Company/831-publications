@@ -1,0 +1,26 @@
+{
+ "ca_file_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+ "cryptographically_verified": true,
+ "gen_time": "Nov 11 17:30:29 2026 GMT",
+ "independently_witnessed": false,
+ "local_time_sent": 1794418253,
+ "notes": [
+  "The gated tool's own urllib transport was refused twice by freetsa.org (RemoteDisconnected, state ABSENT_OUTAGE, no token); the request bytes the tool generated were carried by curl instead \u2014 same .tsq, same digest.",
+  "Verified offline two ways: openssl ts -verify (Verification: OK, pinned FreeTSA CA) and tsa_stamp.py verify (VERIFIED_AT_GENTIME, imprint exact).",
+  "This record was written by the Desk in the tool's schema (831.timestamp.record.v1) because the tool's stamp path could not complete through its own transport; every value above is recomputed from the artifacts on file.",
+  "The tsa field above omits the certificate subject's emailAddress component by design: publication_hygiene.py H4 refuses an address in any record; the address itself is public (it is the timestamp service's own contact, printed in its TSA certificate) and is carried only in freetsa.tsr under the scan's allowance."
+ ],
+ "policy": "tsa_policy1",
+ "request_digest": "197db7aae5923185c9a1f9e58bae219b32e1c1cddc9524afca2b644261928706",
+ "request_nonce": null,
+ "request_sha256": "76ddb8cd0fd16b8b34b567f64504b6ebe18f7c7fcd5d22d1be729491a800d2b6",
+ "response_sha256": "b0ffdbd7bedad3cc95cfa47718abb089868df6d578ae9a95a27c63ebe47e188f",
+ "schema": "831.timestamp.record.v1",
+ "serial": "0x09F07961",
+ "state": "VERIFIED_AT_GENTIME",
+ "timestamped": true,
+ "transport": "curl (application/timestamp-query POST of the tool-generated freetsa.tsq)",
+ "tsa": "DirName:/O=Free TSA/OU=TSA/description=This certificate digitally signs documents and time stamp requests made using the freetsa.org online services/CN=www.freetsa.org/L=Wuerzburg/C=DE/ST=Bayern (the subject's emailAddress component \u2014 the service's own public contact address \u2014 is withheld from this record under hygiene rule H4; it stands in the token freetsa.tsr and the certificate freetsa-tsa.crt, where the scan's named allowance covers it)",
+ "tsa_name": "freetsa",
+ "tsa_url": "https://freetsa.org/tsr"
+}
